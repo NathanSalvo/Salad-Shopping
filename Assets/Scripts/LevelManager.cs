@@ -55,5 +55,22 @@ public class DataManager : MonoBehaviour
         level = 1;
         // load the set level
         SceneManager.LoadScene("Level" + level);
+           // used when a player hits a trigger collider
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.tag == "LevelEnd") {
+            // move to the next level
+            Destroy(other.gameObject);
+            Invoke("NextLevelAfterDelay", 0.2f);
+            } else if (other.gameObject.tag == "GameController") {
+            // player has fallen off the screen
+            Level.instance.HitBaddie();
+            }
+    }
+
+    // used to load the next level after a short delay.
+    void NextLevelAfterDelay() {
+        Level.instance.NextLevel();
+    }
     }
 }  
