@@ -44,7 +44,7 @@ public class Level : MonoBehaviour
             DataManager.instance.Restart();
         } else {
             // reload the current level (points collected are lost)
-            DataManager.instance.ReloadLevel();
+            //DataManager.instance.ReloadLevel();
         }
     }
 
@@ -53,7 +53,7 @@ public class Level : MonoBehaviour
         // increase the saved score in the DataManager by the points collected
         DataManager.instance.score = DataManager.instance.score + pointsCollected;
         // get the DataManager to move to the next level
-        DataManager.instance.NextLevel();
+        //DataManager.instance.NextLevel();
     }
 
 }

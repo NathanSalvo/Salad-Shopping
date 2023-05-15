@@ -33,22 +33,6 @@ public class DataManager : MonoBehaviour
         DontDestroyOnLoad(instance);
     }
 
-    // Loads the next level
-    public void NextLevel () {
-        if (level == totalLevels) {
-            // show end of game
-            // SceneManager.LoadScene("Victory")
-        } else {
-            // increase the stored level and load
-            level = level + 1;
-            SceneManager.LoadScene("Level" + level);
-        }
-    }
-
-    // Reloads the current level
-    public void ReloadLevel () {
-        SceneManager.LoadScene("Level" + level);
-    }
 
     // used to restart the game
     public void Restart() {
