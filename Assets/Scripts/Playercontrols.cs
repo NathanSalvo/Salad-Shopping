@@ -36,5 +36,22 @@ public class Playercontrols : MonoBehaviour
         Vector2 forwards = transform.right * vertical;
         Vector2 sidewards = transform.up * horizontal * -1;
         body.velocity = (forwards + sidewards) * speed;
+
+
+         void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.tag == "LevelEnd") {
+            // move to the next level
+            Destroy(other.gameObject);
+            Invoke("NextLevelAfterDelay", 0.2f);
+        } else if (other.gameObject.tag == "GameController") {
+            // player has fallen off the screen
+            Level.instance.HitBaddie();
+        }
+        }
+
+    // used to load the next level after a short delay.
+    void NextLevelAfterDelay() {
+        Level.instance.NextLevel();
+        }
     }
 }

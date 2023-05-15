@@ -1,59 +1,63 @@
+/**
+ * Saves player relevant informtaion between scenes
+ */
 using UnityEngine;
-using TMPro;
+using UnityEngine.SceneManagement;
 
-// this class manages the level
-public class Level : MonoBehaviour
+public class DataManager : MonoBehaviour
 {
-    public static Level instance;
-    
-    public TMP_Text scoreDisplay;
+    // static reference
+    public static DataManager instance;
 
-    // how many points have been collected in this level
-    private int pointsCollected;
+    // Current score
+    public int score;
+    // Current lives
+    public int lives;
+    // Current health
+    public int health;
 
-    // Start is called before the first frame update
-    void Start()
+    // the current level
+    public int level = 1;
+    // total level
+    public int totalLevels = 7;
+
+
+    // called when the script is started
+    void Awake ()
     {
-        scoreDisplay.text = "Score: " + DataManager.instance.score;
-        pointsCollected = 0;
-    }
-
-    // make sure this is the only level manager
-    void Awake () {
         if(instance == null) {
             instance = this;
         } else {
             Destroy (gameObject);
         }
+        DontDestroyOnLoad(instance);
     }
 
-    // used to increase the current score
-    public void IncreaseScore(int points) {
-        // increase the current points collected
-        pointsCollected = pointsCollected + points;
-        // display the total score
-        scoreDisplay.text = "Score: " + (DataManager.instance.score + pointsCollected);
-    }
-
-    // used when the player hits a baddie
-    public void HitBaddie () {
-        // decrease the lives
-        DataManager.instance.lives = DataManager.instance.lives - 1;
-        if (DataManager.instance.lives == 0) {
-            // restart the game when there are no more lives
-            DataManager.instance.Restart();
+    // Loads the next level
+    public void NextLevel () {
+        if (level == totalLevels) {
+            // show end of game
+            // SceneManager.LoadScene("Victory")
         } else {
-            // reload the current level (points collected are lost)
-            DataManager.instance.ReloadLevel();
+            // increase the stored level and load
+            level = level + 1;
+            SceneManager.LoadScene("Level" + level);
         }
     }
 
-    // used to move to the next level
-    public void NextLevel() {
-        // increase the saved score in the DataManager by the points collected
-        DataManager.instance.score = DataManager.instance.score + pointsCollected;
-        // get the DataManager to move to the next level
-        DataManager.instance.NextLevel();
+    // Reloads the current level
+    public void ReloadLevel () {
+        SceneManager.LoadScene("Level" + level);
     }
 
+    // used to restart the game
+    public void Restart() {
+        // reset values
+        score = 0;
+        lives = 3;
+        level = 1;
+        // load the set level
+        SceneManager.LoadScene("Level" + level);
+    }
 }
+
