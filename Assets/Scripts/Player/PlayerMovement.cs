@@ -1,4 +1,4 @@
-
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -27,6 +27,13 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", movement.x);
         animator.SetFloat("Speed", movement.magnitude);
     }
+
+ void OnCollisionEnter2D (Collision2D col) {
+        if (col.gameObject.tag == "Acid") {
+                    {SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+0);
+        }
+    }
+ }
 
     void FixedUpdate()
     {
