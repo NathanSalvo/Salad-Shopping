@@ -1,61 +1,62 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-
-public class DashAbility : MonoBehaviour
- {
-     private Rigidbody2D rb;
+ using System.Collections.Generic;
+ using UnityEngine;
  
-     public DashState dashState;
-     public float dashForce;
-     public float dashTimer;
-     public float maxDash = 20f;
+ public class DashAbility : MonoBehaviour {
  
-     public Vector2 savedVelocity;
  
-     private void Start()
+ 
+     public float boostCooldown = 3f;
+     public float boostDuration = 0.5f;
+     private float speedBoost = 10;
+ 
+     private bool hasCooldown;
+     private Vector3 normalMovementVector = Vector3.forward;
+     private Vector3 currentMovementVector;
+ 
+     void Start()
      {
-         rb = GetComponent<Rigidbody2D>();
-     }
+         currentMovementVector = normalMovementVector;
  
+         // doesn't allow to have speed right at the beginning
+         // but comment it out if you want to have boost immediately at startup
+         StartCoroutine(ActivateCooldown());
+     }
+     
      void Update()
      {
-         switch (dashState)
+         if(Input.GetKeyDown(KeyCode.Space) && !hasCooldown)
          {
-             case DashState.Ready:
-                 var isDashKeyDown = Input.GetKeyDown(KeyCode.LeftShift);
-                 if (isDashKeyDown)
-                 {
-                     savedVelocity = rb.velocity;
-                     rb.AddForce(new Vector2(rb.velocity.x * dashForce, rb.velocity.y));
-                     dashState = DashState.Dashing;
-                 }
-                 break;
-             case DashState.Dashing:
-                 dashTimer += Time.deltaTime * 3;
-                 if (dashTimer >= maxDash)
-                 {
-                     dashTimer = maxDash;
-                     rb.velocity = savedVelocity;
-                     dashState = DashState.Cooldown;
-                 }
-                 break;
-             case DashState.Cooldown:
-                 dashTimer -= Time.deltaTime;
-                 if (dashTimer <= 0)
-                 {
-                     dashTimer = 0;
-                     dashState = DashState.Ready;
-                 }
-                 break;
+             // apply boost, i simply added another vector to it
+             currentMovementVector += Vector3.forward * speedBoost; 
+             // activate the cooldown and start the deactivation method for the boost
+             StartCoroutine(ActivateCooldown());
+             StartCoroutine(ResetMovementVector());
          }
+         // just some basic movement for the test
+         transform.Translate(currentMovementVector * Time.deltaTime);
+     }
+ 
+     IEnumerator ResetMovementVector()
+     {
+         // wait some seconds
+         yield return new WaitForSeconds(boostDuration);
+         // return to normal speed
+         currentMovementVector = normalMovementVector;
+         Debug.Log("boost ended");
+     }
+ 
+     IEnumerator ActivateCooldown()
+     {
+         // put some code to disable the boost-is-ready bar
+         // diable the ability to use boost
+         hasCooldown = true;
+         // wait until the boost is ready again
+         yield return new WaitForSeconds(boostCooldown);
+         // make the boost usable
+         hasCooldown = false;
+         Debug.Log("boost ready"); 
+         // put some code to enable the boost-is-ready bar
      }
  }
  
- public enum DashState
- {
-     Ready,
-     Dashing,
-     Cooldown
- }
