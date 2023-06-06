@@ -23,13 +23,13 @@ public class InventorySO : ScriptableObject
         }
     }
 
-    public int AddItem(ItemSO item, int quantity)
+    public void AddItem(ItemSO item, int quantity)
     {
         for (int i = 0; i < inventoryItems.Count; i++)
         {
-            if(inventoryItem[i].IsEmpty)
+            if (inventoryItems[i].IsEmpty)
             {
-                inventoryItems[I] = new InventoryItem
+                inventoryItems[i] = new InventoryItem
                 {
                     item = item,
                     quantity = quantity
