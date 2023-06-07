@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Twonkie
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 1
-  <MaxStackSize>k__BackingField: 1
+  <MaxStackSize>k__BackingField: 30
   <Name>k__BackingField: Twonkie
   <Description>k__BackingField: 'Brown Long sponge like food
 
