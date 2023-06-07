@@ -140,9 +140,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018263161, y: 0}
+  m_Offset: {x: -0.011557937, y: 0}
   serializedVersion: 2
-  m_Radius: 0.70528513
+  m_Radius: 0.14205015
 --- !u!114 &6464052877888893221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,4 +204,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 1
-  _healthController: {fileID: 287787497240226191, guid: 49ab31c7483b98443bd5988f4b0d221f, type: 3}
+  _healthController: {fileID: 4891767150295850370, guid: 49ab31c7483b98443bd5988f4b0d221f, type: 3}
