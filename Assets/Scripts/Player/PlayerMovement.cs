@@ -3,10 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float dashDuration = 1.0f;
-    private bool canDash = true;
     public float moveSpeed = 5f;
-    public float dashSpeed = 10f;
     public float normalSpeed = 5f;
 
     public Rigidbody2D rb;
@@ -26,12 +23,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if (Input.GetKeyDown("space") && !canDash) {
-            Debug.Log("dashing");
-            moveSpeed = dashSpeed;
-            Invoke ("enddash", dashDuration);
-            canDash = false;
-        }
+            //changes movement speed when shift held
+            if (Input.GetKey (KeyCode.LeftShift))
+                moveSpeed = 3f;
+            else 
+                moveSpeed = 0.64f;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         spriteRenderer.flipX = movement.x < 0.01 ? true : false; 
@@ -39,17 +35,18 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimation();
     }
 
- void OnCollisionEnter2D (Collision2D col) {
+    void OnCollisionEnter2D (Collision2D col) 
+    {
         if (col.gameObject.tag == "Acid") {
                     {SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+0);
+             }
         }
     }
- }
     
     void UpdateAnimation()
     {
         UpdateMovement();
-
+//speed
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);    
@@ -59,16 +56,5 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime); 
-    }
-
-    void enddash()
-    {
-        moveSpeed = normalSpeed;
-        Invoke("endabledash", dashDuration);
-    } 
-
-    void endabledash()
-    {
-        canDash = true;
     }
 }

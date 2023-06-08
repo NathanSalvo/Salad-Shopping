@@ -11,7 +11,7 @@ public class CircularMovement : MonoBehaviour {
 	float posX, posY, angle = 0f;
 
 	// Update is called once per frame
-	//rotates boss around rotation point
+	//rotates thing around rotation point
 	void Update () {
 		posX = rotationCenter.position.x + Mathf.Cos (angle) * rotationRadius;
 		posY = rotationCenter.position.y + Mathf.Sin (angle) * rotationRadius;
