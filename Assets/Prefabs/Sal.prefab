@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -3046702796841341246}
   - component: {fileID: -6698780287601441665}
   - component: {fileID: 2048590894901939478}
+  - component: {fileID: 7480192820578764486}
   - component: {fileID: -8482361596786174578}
   m_Layer: 0
   m_Name: Sal
@@ -199,6 +200,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &7480192820578764486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982395235941003218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09afa27e4e52fbc46bf9ce74b0adf24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: 15
+  hearts: []
 --- !u!61 &-8482361596786174578
 BoxCollider2D:
   m_ObjectHideFlags: 0

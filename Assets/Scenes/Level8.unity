@@ -812,7 +812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.049686003, y: -2.492532, z: -9}
+  m_LocalPosition: {x: 0.04968648, y: -2.4928982, z: -9}
   m_LocalScale: {x: 0, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2000,6 +2000,8 @@ GameObject:
   - component: {fileID: 2036721309}
   - component: {fileID: 2036721312}
   - component: {fileID: 2036721314}
+  - component: {fileID: 2036721316}
+  - component: {fileID: 2036721315}
   m_Layer: 0
   m_Name: mcboss
   m_TagString: Untagged
@@ -2135,6 +2137,34 @@ MonoBehaviour:
   rotationCenter: {fileID: 2135494634}
   rotationRadius: 2
   angularSpeed: 0.7
+--- !u!114 &2036721315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036721308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09afa27e4e52fbc46bf9ce74b0adf24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: 30
+  hearts: []
+--- !u!114 &2036721316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036721308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40d5310e741fb04d92e044e0570b7db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDamage: 4
+  _healthController: {fileID: 0}
 --- !u!1 &2135494633
 GameObject:
   m_ObjectHideFlags: 0

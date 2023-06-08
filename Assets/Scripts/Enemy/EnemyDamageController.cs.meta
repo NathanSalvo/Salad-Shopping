@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Enemy/EnemyDamageController.cs.meta
+guid: 581f644d42b08ab4188f87ce73f558e9
+========
+guid: 1361547899a558b458cbbd45d417aaae
+>>>>>>>> 6695b639b38d26be421ee47c06c1b15f5f2bb385:Assets/Scripts/BabyProjectile.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
