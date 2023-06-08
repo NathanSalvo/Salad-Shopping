@@ -409,7 +409,7 @@ MonoBehaviour:
   dashDuration: 1
   moveSpeed: 0.64
   dashSpeed: 10
-  normalSpeed: 5
+  normalSpeed: 0.64
   rb: {fileID: 3304700915687562469}
   animator: {fileID: 3304700915687562468}
 --- !u!114 &3304700915687562466

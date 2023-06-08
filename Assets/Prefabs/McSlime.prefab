@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 6464052877888893221}
   - component: {fileID: 6464052877888893218}
   - component: {fileID: 6464052877888893219}
-  - component: {fileID: 6464052877888893216}
+  - component: {fileID: -3846519100649412249}
   m_Layer: 0
-  m_Name: 'slime dow '
+  m_Name: McSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b430623406eb2a94193e7d66fac160e3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.010215759, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda8eeba2dd7bcb469e4a7786ccde200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAwarenessDistance: 1
+  _playerAwarenessDistance: 100
 --- !u!114 &6464052877888893218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d649dc21353939429cd2dec508a4241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.75
+  _speed: 0.2
   _rotationSpeed: 8000
 --- !u!50 &6464052877888893219
 Rigidbody2D:
@@ -191,7 +191,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6464052877888893216
+--- !u!114 &-3846519100649412249
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,8 +200,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6464052877888893217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c40d5310e741fb04d92e044e0570b7db, type: 3}
+  m_Script: {fileID: 11500000, guid: 96ce43ad5bfc0df458d93148d52886a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDamage: 1
-  _healthController: {fileID: 4891767150295850370, guid: 49ab31c7483b98443bd5988f4b0d221f, type: 3}
