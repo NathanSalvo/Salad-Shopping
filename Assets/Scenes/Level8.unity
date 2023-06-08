@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4310804729815649825, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
+      propertyPath: EnemyhealthController
+      value: 
+      objectReference: {fileID: 2036721315}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
 --- !u!1 &144307444
@@ -812,7 +816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04968648, y: -2.4928982, z: -9}
+  m_LocalPosition: {x: 0.049685765, y: -2.4924357, z: -9}
   m_LocalScale: {x: 0, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2004,7 +2008,7 @@ GameObject:
   - component: {fileID: 2036721315}
   m_Layer: 0
   m_Name: mcboss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2163,8 +2167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40d5310e741fb04d92e044e0570b7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDamage: 4
-  _healthController: {fileID: 0}
+  enemyDamage: 6
+  _healthController: {fileID: 1819756632}
 --- !u!1 &2135494633
 GameObject:
   m_ObjectHideFlags: 0

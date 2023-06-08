@@ -6,7 +6,7 @@ public class EnemyDamageController : MonoBehaviour
 {
    [SerializeField] private int PlayerDamage;
 
-   [SerializeField] private EnemyHealthController1 EnemyhealthController;
+   [SerializeField] private EnemyHealthController1 EnemyhealthController, Bob, Sal;
 
 //checks to see if collsion with Enemy then damage
    private void OnTriggerEnter2D(Collider2D collision)

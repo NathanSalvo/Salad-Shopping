@@ -671,6 +671,25 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 970551667}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!1 &485766631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464052877888893217, guid: 444a4a7124ca5704584219239e58a3b6, type: 3}
+  m_PrefabInstance: {fileID: 1389149325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &485766641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485766631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09afa27e4e52fbc46bf9ce74b0adf24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: 5
+  hearts: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.10748969, y: -2.5791047, z: -9}
+  m_LocalPosition: {x: 0.107485875, y: -2.5780795, z: -9}
   m_LocalScale: {x: 0, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1038,6 +1057,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4310804729815649825, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
+      propertyPath: Bob
+      value: 
+      objectReference: {fileID: 1401978950}
+    - target: {fileID: 4310804729815649825, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
+      propertyPath: Sal
+      value: 
+      objectReference: {fileID: 1182018220}
+    - target: {fileID: 4310804729815649825, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
+      propertyPath: EnemyhealthController
+      value: 
+      objectReference: {fileID: 485766641}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
 --- !u!1 &956354641
@@ -1234,6 +1265,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1182018220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7480192820578764486, guid: 168e2ab91e256424caa0d3f46a113a60, type: 3}
+  m_PrefabInstance: {fileID: 1854077894}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09afa27e4e52fbc46bf9ce74b0adf24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1288562575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,6 +1367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'slime dow '
       objectReference: {fileID: 0}
+    - target: {fileID: 6464052877888893217, guid: 444a4a7124ca5704584219239e58a3b6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6464052877888893221, guid: 444a4a7124ca5704584219239e58a3b6, type: 3}
       propertyPath: _playerAwarenessDistance
       value: 100
@@ -1375,6 +1421,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 444a4a7124ca5704584219239e58a3b6, type: 3}
+--- !u!114 &1401978950 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3768654454885881786, guid: f6a11e1bcf70bd842a5688480fc9af65, type: 3}
+  m_PrefabInstance: {fileID: 8195343538947967461}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09afa27e4e52fbc46bf9ce74b0adf24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1406870849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,17 +1956,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sal
       objectReference: {fileID: 0}
+    - target: {fileID: 2982395235941003218, guid: 168e2ab91e256424caa0d3f46a113a60, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4752424760733472115, guid: 168e2ab91e256424caa0d3f46a113a60, type: 3}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4752424760733472115, guid: 168e2ab91e256424caa0d3f46a113a60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.27
+      value: -3.56
       objectReference: {fileID: 0}
     - target: {fileID: 4752424760733472115, guid: 168e2ab91e256424caa0d3f46a113a60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4752424760733472115, guid: 168e2ab91e256424caa0d3f46a113a60, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2147,9 +2208,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blob
       objectReference: {fileID: 0}
+    - target: {fileID: 292002658348832034, guid: f6a11e1bcf70bd842a5688480fc9af65, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3019151840735379960, guid: f6a11e1bcf70bd842a5688480fc9af65, type: 3}
       propertyPath: _speed
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307943792710929231, guid: f6a11e1bcf70bd842a5688480fc9af65, type: 3}
+      propertyPath: enemyDamage
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4307943792710929231, guid: f6a11e1bcf70bd842a5688480fc9af65, type: 3}
       propertyPath: _healthController
@@ -2161,11 +2230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4522660737107142380, guid: f6a11e1bcf70bd842a5688480fc9af65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.36
       objectReference: {fileID: 0}
     - target: {fileID: 4522660737107142380, guid: f6a11e1bcf70bd842a5688480fc9af65, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 4522660737107142380, guid: f6a11e1bcf70bd842a5688480fc9af65, type: 3}
       propertyPath: m_LocalPosition.z
