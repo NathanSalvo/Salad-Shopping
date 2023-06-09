@@ -25,9 +25,10 @@ public class PlayerMovement : MonoBehaviour
     {   
             //changes movement speed when shift held
             if (Input.GetKey (KeyCode.LeftShift))
-                moveSpeed = 3f;
+                moveSpeed = 2f;
             else 
                 moveSpeed = 0.64f;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         spriteRenderer.flipX = movement.x < 0.01 ? true : false; 

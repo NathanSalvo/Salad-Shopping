@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6464052877888893218}
   - component: {fileID: 6464052877888893219}
   - component: {fileID: 6464052877888893216}
+  - component: {fileID: 7621481956889000129}
   m_Layer: 0
   m_Name: 'slime dow '
   m_TagString: Enemy
@@ -205,3 +206,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDamage: 1
   _healthController: {fileID: 4891767150295850370, guid: 49ab31c7483b98443bd5988f4b0d221f, type: 3}
+--- !u!114 &7621481956889000129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6464052877888893217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09afa27e4e52fbc46bf9ce74b0adf24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: 4
+  hearts: []
