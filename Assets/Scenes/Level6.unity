@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 72540221}
   m_Layer: 0
   m_Name: Background 6
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -867,7 +867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5403004, y: -1.8894978, z: -9}
+  m_LocalPosition: {x: -0.5403004, y: -1.8893359, z: -9}
   m_LocalScale: {x: 0, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1024,10 +1024,11 @@ GameObject:
   - component: {fileID: 668752352}
   - component: {fileID: 668752351}
   - component: {fileID: 668752350}
+  - component: {fileID: 668752359}
   - component: {fileID: 668752358}
   m_Layer: 0
   m_Name: miniboss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1044,7 +1045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40d5310e741fb04d92e044e0570b7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDamage: 0
+  enemyDamage: 4
   _healthController: {fileID: 4891767149993840757}
 --- !u!114 &668752351
 MonoBehaviour:
@@ -1086,7 +1087,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02272296, y: -0.06362438}
+  m_Offset: {x: 0.072042406, y: -0.0643346}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1097,7 +1098,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.80202925, y: 1.7927511}
+  m_Size: {x: 1.6672777, y: 1.8600953}
   m_EdgeRadius: 0
 --- !u!61 &668752354
 BoxCollider2D:
@@ -1112,7 +1113,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013633847, y: -0.059079647}
+  m_Offset: {x: 0.06671059, y: -0.059079647}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1123,7 +1124,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.82020783, y: 1.8018405}
+  m_Size: {x: 1.615412, y: 1.8018405}
   m_EdgeRadius: 0
 --- !u!95 &668752355
 Animator:
@@ -1233,6 +1234,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &668752359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668752349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9c12d79e8bb6345982eebb730a5619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MiniHealth: 15
+  hearts: []
 --- !u!1 &706620520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1770,14 @@ PrefabInstance:
     - target: {fileID: 3304700915687562474, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310804729815649825, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
+      propertyPath: Mini
+      value: 
+      objectReference: {fileID: 668752359}
+    - target: {fileID: 4310804729815649825, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
+      propertyPath: EnemyhealthController
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
