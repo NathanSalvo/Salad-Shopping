@@ -1420,6 +1420,7 @@ GameObject:
   - component: {fileID: 668752351}
   - component: {fileID: 668752350}
   - component: {fileID: 668752358}
+  - component: {fileID: 668752359}
   m_Layer: 0
   m_Name: miniboss
   m_TagString: Enemy
@@ -1628,6 +1629,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
+=======
+--- !u!114 &668752359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668752349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09afa27e4e52fbc46bf9ce74b0adf24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: 10
+  hearts: []
+>>>>>>> aef1d6a3ce2a5ce729bf8f2cd20dcf8fb0822bb8
 --- !u!1 &706620520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,7 +2483,7 @@ PrefabInstance:
     - target: {fileID: 4310804729815649825, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
       propertyPath: EnemyhealthController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 668752359}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eb762e11f97b2444995184af78fd96c, type: 3}
 --- !u!1 &1656183053
